@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Detail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Item Detail</h1>
+    <p><strong>Name:</strong> {{ item.name }}</p>
+    <p><strong>Description:</strong> {{ item.description }}</p>
+    <a href="{% url 'item_update' item.pk %}" class="btn btn-primary mt-3">Update Item</a> <br><br>
+        <a href="{% url 'item_list' %}" class="btn btn-primary mt-3"> <-Back </a> <br> <br> 
+
+    <form action="{% url 'item_delete' item.pk %}" method="post">
+        {% csrf_token %}
+        <br>
+        <input type="submit" value="Delete Item">
+    </form>
+</body>
+</html>

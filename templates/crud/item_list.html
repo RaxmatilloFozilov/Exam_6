@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item List</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 >Ma'lumotlar </h1>
+    <ul>
+        {% for item in items %}
+            <li><a href="{% url 'item_detail' item.pk %}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'item_create' %}" class="btn btn-primary mt-3">Create New Item</a>
+    <br>
+{#    <a href="{% url 'item_delete' %}" class="btn btn-primary mt-3">Delete</a>#}
+
+</body>
+</html>

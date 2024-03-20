@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Dasturlash Tili</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .feature-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+            color: #444;
+        }
+        .search-form {
+            text-align: center;
+        }
+        .news-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<br>
+            <form class="search-form" action="/search" method="get">
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="query" placeholder="Qidiruv...">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Qidirish</button>
+                </div>
+            </div>
+        </form>
+
+    <header>
+        <div class="container">
+            <h1>Python mashhurligi</h1>
+        </div>
+    </header>
+        <img src="/static/style/guido-headshot-2019.jpg" alt="Python Logo" style="display: block; margin: 0 auto; width: 400px; height: 300px">
+
+    <div class="container">
+        <h2 class="feature-title">Python Haqida</h2>
+        <p>Python, Guido van Rossum tomonidan yaratilgan, yorqin va oddiy sintaksisga ega bo'lgan umumiy maqsadli dasturlash tili.</p>
+        <p>Python yaralish tarixi Yangi-yil kunida Guido van Rossum ning ishsiz o'tirgan paytlarida boshlanganini bilarmidingiz!!! </p>
+        <p>Python ABC, Modula-3, C, C ++, Algol-68, SmallTalk va Unix shell kabi boshqa ko’plab tillardan va boshqa skript tillaridan olingan.</p>
+        <h2 class="feature-title">Python xususiyatlari:</h2>
+        <ul class="feature-list">
+            <li><strong>O’qish oson:</strong>  Python nisbatan kam kalit so’zlar, oddiy tuzilish va aniq belgilangan sintaksisga ega. Bu o’rganuvchini qisqa vaqt ichida yodlab olish imkonini beradi.</li>
+            <li><strong>Aniqlik:</strong> Python kodi juda aniq va ko’zga ko’rinadigan bo’ladi.</li>
+            <li><strong>Oson ishlash:</strong> Pythonning muvaffaqiyati – manba kodi juda oson.</li>
+            <li><strong>Interaktiv usu:</strong> Pythonda ishlashda terminalda ishlash uchun juda qulay terminalda test qilib ko’rsa bo’ladi.</li>
+        </ul>
+
+        <a href="{% url 'table_list' %}" class="btn btn-primary mt-3">Barcha yangiliklarni ko'rish</a>
+
+        <a href="{% url 'user_list' %}"  class="btn btn-primary mt-3" >Tizimga kirish</a>
+
+        <a href="{% url 'item_list' %}" class="btn btn-primary mt-3">Ma'lumot qo'shish</a>
+
+
+    </div>
+</body>
+</html>
