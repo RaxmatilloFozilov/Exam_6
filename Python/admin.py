@@ -10,6 +10,7 @@ class ItemAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'description')
     search_fields =('name', 'description')
 
+
 admin.site.register(Topic, TopicAdmin)
 admin.site.register(Item, ItemAdmin)
 

@@ -19,8 +19,9 @@
             <li><a href="{% url 'item_detail' item.pk %}">{{ item.name }}</a></li>
         {% endfor %}
     </ul>
-    <a href="{% url 'item_create' %}" class="btn btn-primary mt-3">Create New Item</a>
-    <br>
+
+    <a href="{% url 'item_create' %}" class="btn btn-primary mt-3">Create New Item</a> <br>
+    
 
 </body>
 </html>
