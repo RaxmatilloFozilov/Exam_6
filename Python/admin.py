@@ -12,4 +12,5 @@ class ItemAdmin(admin.ModelAdmin):
 
 admin.site.register(Topic, TopicAdmin)
 admin.site.register(Item, ItemAdmin)
+
 # Register your models here.

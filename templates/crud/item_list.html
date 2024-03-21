@@ -8,6 +8,11 @@
 
 </head>
 <body>
+
+<div style="width: 150px; height: 150px; overflow: hidden; border-radius: 50%; clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);">
+    <img src="/static/style/1_iZrPtgGCMRR6NEU29Bx2Tg.jpg" alt="Django administration Logo" class="img-circle brand-image elevation-3" style="width: 100%; height: auto;">
+</div>
+
     <h1 >Ma'lumotlar </h1>
     <ul>
         {% for item in items %}
@@ -16,7 +21,6 @@
     </ul>
     <a href="{% url 'item_create' %}" class="btn btn-primary mt-3">Create New Item</a>
     <br>
-{#    <a href="{% url 'item_delete' %}" class="btn btn-primary mt-3">Delete</a>#}
 
 </body>
 </html>

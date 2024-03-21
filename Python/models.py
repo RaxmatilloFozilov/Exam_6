@@ -11,16 +11,6 @@ class Topic(models.Model):
         ordering = ['id']
 
 
-
-# class Person(models.Model):
-#     name = models.CharField(max_length=100)
-#     age = models.IntegerField()
-#     phone_number = models.CharField(max_length=15)
-#     email = models.EmailField()
-#     address = models.CharField(max_length=255)
-#     date_of_birth = models.DateField()
-
-
 class Item(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -30,4 +20,4 @@ class Item(models.Model):
 
     class Meta:
         ordering = ['id']
-    #     search_fields = ('name', 'description')
+        unique_together =['name', 'description']
