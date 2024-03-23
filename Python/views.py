@@ -12,7 +12,7 @@ def user_list(request):
         username = request.POST.get('uname')
         password = request.POST.get('pswd')
 
-        return redirect('success')
+        return redirect('tajriba')
     else:
         return render(request, 'learn-html.html')
 

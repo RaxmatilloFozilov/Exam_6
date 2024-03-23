@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.topic_list, name='tajriba'),
-    path('user/', views.user_list , name='user_list'),
+    path('users/', views.user_list , name='user_list'),
     path('jadval/', views.table_list, name='table_list'),
 
     path('item/', views.item_list, name='item_list'),
